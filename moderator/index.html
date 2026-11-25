@@ -124,5 +124,60 @@
   <footer>
     THE CAMEL · Private Moderator · Owner authority first
   </footer>
+ 
+<div id="camel-admin-login" style="max-width:420px;margin:30px auto;padding:24px;background:#111;color:#d8b45a;border:1px solid #8a6b25;border-radius:14px;font-family:Arial;text-align:center">
+  <h2>THE CAMEL</h2>
+  <p>SOVEREIGN ADMIN ACCESS</p>
+
+  <input id="camel-email" type="email" placeholder="Administrator email"
+    style="width:100%;padding:13px;margin:8px 0;box-sizing:border-box">
+
+  <input id="camel-password" type="password" placeholder="Password"
+    style="width:100%;padding:13px;margin:8px 0;box-sizing:border-box">
+
+  <button id="camel-login" style="width:100%;padding:14px;background:#d8b45a;color:#111;font-weight:bold;border:0;border-radius:6px">
+    SECURE SIGN IN
+  </button>
+
+  <p id="camel-login-status" style="color:#fff"></p>
+</div>
+
+<script>
+document.getElementById("camel-login").addEventListener("click", async () => {
+  const status = document.getElementById("camel-login-status");
+  const email = document.getElementById("camel-email").value.trim();
+  const password = document.getElementById("camel-password").value;
+
+  status.textContent = "Authenticating...";
+
+  try {
+    const client = window.camelSupabase;
+
+    if (!client) throw new Error("Supabase connection unavailable.");
+
+    const { data, error } = await client.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    if (error) throw error;
+
+    const { data: profile, error: profileError } = await client
+      .from("camel_moderators")
+      .select("role")
+      .eq("id", data.user.id)
+      .single();
+
+    if (profileError || !profile || profile.role !== "admin") {
+      await client.auth.signOut();
+      throw new Error("Administrator access not authorized.");
+    }
+
+    status.textContent = "ADMINISTRATOR AUTHENTICATED.";
+  } catch (error) {
+    status.textContent = error.message;
+  }
+});
+</script>
 </body>
 </html>
