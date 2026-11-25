@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE CAMEL | Command Center</title>
+  <style>
+    :root {
+      --bg: #10130f;
+      --panel: #1c2119;
+      --gold: #d8ad55;
+      --text: #f5f0e5;
+      --muted: #aaa995;
+      --green: #8dbb83;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+    }
+    header {
+      max-width: 1000px;
+      margin: auto;
+      padding: 24px 0;
+      border-bottom: 1px solid #414536;
+    }
+    h1 { color: var(--gold); letter-spacing: 3px; }
+    .subtitle { color: var(--muted); }
+    main { max-width: 1000px; margin: 28px auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid #394032;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card h2 { color: var(--gold); font-size: 18px; }
+    .value { font-size: 27px; font-weight: bold; }
+    .muted { color: var(--muted); }
+    .status { color: var(--green); }
+    .notice {
+      margin-top: 24px;
+      padding: 18px;
+      border-left: 4px solid var(--gold);
+      background: var(--panel);
+      border-radius: 6px;
+    }
+    footer {
+      max-width: 1000px;
+      margin: 40px auto 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐪 THE CAMEL</h1>
+    <p class="subtitle">SOVEREIGN COMMAND CENTER · 2026</p>
+    <p class="status">● Public dashboard preview</p>
+  </header>
+
+  <main>
+    <h2>Command Overview</h2>
+    <div class="grid">
+      <section class="card">
+        <h2>Bitcoin Treasury</h2>
+        <p class="value">0 sats</p>
+        <p class="muted">Demo balance — not connected to a wallet</p>
+      </section>
+
+      <section class="card">
+        <h2>ZBD Operations</h2>
+        <p class="value">Not connected</p>
+        <p class="muted">Gaming and rewards integration planned</p>
+      </section>
+
+      <section class="card">
+        <h2>Independent Earnings</h2>
+        <p class="value">Not connected</p>
+        <p class="muted">Opportunity research planned</p>
+      </section>
+
+      <section class="card">
+        <h2>System Status</h2>
+        <p class="value status">Preview mode</p>
+        <p class="muted">No live automation is running</p>
+      </section>
+    </div>
+
+    <h2 style="margin-top:32px">Specialist Team</h2>
+    <div class="grid">
+      <section class="card">
+        <h2>DUNE</h2>
+        <p>ZBD gaming and referral operations.</p>
+        <p class="muted">Status: Planned</p>
+      </section>
+
+      <section class="card">
+        <h2>SIROCCO</h2>
+        <p>Independent earning research.</p>
+        <p class="muted">Status: Planned</p>
+      </section>
+
+      <section class="card">
+        <h2>OASIS</h2>
+        <p>Bitcoin rewards Treasury and payouts.</p>
+        <p class="muted">Status: Planned</p>
+      </section>
+    </div>
+
+    <div class="notice">
+      <strong>Owner authority comes first.</strong>
+      <p>Financial actions require explicit owner authorization.
+      This preview does not perform transactions, connect accounts,
+      or access private Moderator controls.</p>
+    </div>
+  </main>
+
+  <footer>
+    THE CAMEL · Owner governed · Security first · Bitcoin rewards focused
+  </footer>
+</body>
+</html>
