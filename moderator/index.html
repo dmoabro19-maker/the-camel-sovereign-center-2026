@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE CAMEL | Moderator God Mode</title>
+  <style>
+    :root {
+      --bg: #10130f;
+      --panel: #1c2119;
+      --gold: #d8ad55;
+      --text: #f5f0e5;
+      --muted: #aaa995;
+      --red: #d87568;
+      --green: #8dbb83;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+    }
+    header, main, footer { max-width: 950px; margin: auto; }
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid #414536;
+    }
+    h1 { color: var(--gold); letter-spacing: 2px; }
+    .warning {
+      color: var(--red);
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid #394032;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card h2 { color: var(--gold); font-size: 18px; }
+    .muted { color: var(--muted); }
+    button {
+      padding: 12px 16px;
+      border: 1px solid var(--gold);
+      border-radius: 7px;
+      background: transparent;
+      color: var(--gold);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .notice {
+      margin-top: 24px;
+      padding: 18px;
+      background: var(--panel);
+      border-left: 4px solid var(--red);
+      border-radius: 6px;
+    }
+    footer {
+      margin-top: 35px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐪 THE CAMEL — GOD MODE</h1>
+    <p class="warning">PRIVATE OWNER CONTROL · PREVIEW ONLY</p>
+    <p class="muted">No authentication or live controls are connected yet.</p>
+  </header>
+
+  <main>
+    <h2>Owner Command Center</h2>
+    <div class="grid">
+      <section class="card">
+        <h2>Sovereign Authority</h2>
+        <p>Owner retains final approval over system-wide decisions.</p>
+        <p class="muted">Status: Design preview</p>
+      </section>
+
+      <section class="card">
+        <h2>Specialist Controls</h2>
+        <p>DUNE · SIROCCO · OASIS</p>
+        <p class="muted">Bot permissions are not connected.</p>
+      </section>
+
+      <section class="card">
+        <h2>Security Oversight</h2>
+        <p>Authentication, access controls, and audit logging.</p>
+        <p class="muted">Implementation required before deployment.</p>
+      </section>
+
+      <section class="card">
+        <h2>Treasury Oversight</h2>
+        <p>Review rewards and proposed payout activity.</p>
+        <p class="muted">No wallet or transaction connection.</p>
+      </section>
+    </div>
+
+    <div class="notice">
+      <h2>Emergency Pause — Not Connected</h2>
+      <p>This preview button does not pause any live system.</p>
+      <button type="button" disabled>PAUSE SYSTEM (PREVIEW ONLY)</button>
+    </div>
+
+    <div class="notice">
+      <h2>Financial Approval Policy</h2>
+      <p>No automated bot may independently authorize transfers,
+      withdrawals, trades, or other sensitive financial actions.</p>
+      <p>Explicit owner authorization is required.</p>
+    </div>
+  </main>
+
+  <footer>
+    THE CAMEL · Private Moderator · Owner authority first
+  </footer>
+</body>
+</html>
